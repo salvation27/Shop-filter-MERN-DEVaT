@@ -1,0 +1,10 @@
+.flex{
+  display: flex;
+}
+ul,li{
+  display: block;
+}
+.products_wrap {
+  flex-wrap: wrap;
+  justify-content: space-between;
+}

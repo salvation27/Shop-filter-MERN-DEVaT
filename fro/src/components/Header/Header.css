@@ -1,0 +1,28 @@
+.header {
+  background:#ccc;
+}
+.header_menu a {
+text-decoration: none;
+color: #fff;
+font-size: 20px;
+font-weight: 600;
+}
+.header_logo img {
+  width: 60px;
+}
+.header_menu li {
+  padding:0px 10px;
+}
+.cart_num {
+  width: 20px;
+  height: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #000;
+  color: #fff;
+  border-radius: 40px;
+}
+.header_wrap {
+  justify-content: space-between;
+}

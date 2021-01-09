@@ -24,11 +24,13 @@ const productSchema = new mongoose.Schema({
     },
     content:{
         type: String,
-        required: true
+        required: true,
+        default:'content'
     },
     images:{
-        type: Object,
-        required: true
+        type: String,
+        required: true,
+        default:'https://cdn.fishki.net/upload/post/201512/08/1767854/tn/19_1.jpg'
     },
     category:{
         type: String,
