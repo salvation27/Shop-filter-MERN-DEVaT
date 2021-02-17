@@ -11,7 +11,7 @@ function ProductsApi() {
       const getProducts = async ()=>{
           const res = await axios.get('/api/products')
           setProductsHook(res.data.products);
-          // setProducts(productsData);
+         
         }
 
         useEffect(()=>{

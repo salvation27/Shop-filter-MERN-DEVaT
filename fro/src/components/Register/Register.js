@@ -1,13 +1,13 @@
 import React,{useState} from 'react'
 import {Link} from 'react-router-dom'
-import axios from 'axios'
+import axios from  'axios'
 
-export default function Login() {
+export default function Купшыеук() {
   const[user,setUser] = useState({
+    name:'',
     email:'',
     password:'',
   })
-
 
   const onChangeInput= (e) => {
     console.log(e.target)
@@ -18,20 +18,22 @@ export default function Login() {
       })
   }
 
-
   
-const loginSubmit = async (e) =>{
- e.preventDefault()
- try {
-   await axios.post('/user/login',{...user})
-// записываем  в локал стораж
-   localStorage.setItem('firstLogin',true)
-   window.location.href = '/'
-
- } catch (error) {
-   alert(error.response.data.msg)
+  
+const registerSubmit = async (e) =>{
+  e.preventDefault()
+  try {
+    await axios.post('/user/register',{...user})
+ // записываем  в локал стораж
+    localStorage.setItem('firstLogin',true)
+    window.location.href = '/'
+ 
+  } catch (error) {
+    alert(error.response.data.msg)
+  }
  }
-}
+
+
   return (
     <div className='login_page'>
        <div className="container">
@@ -39,30 +41,39 @@ const loginSubmit = async (e) =>{
            <div className="col">
              <div className="login_wrap">
                <div className="login_title">
-                 <h1>Login</h1>
+                 <h1>Register</h1>
                </div>
-               <form onSubmit={loginSubmit}>
+               <form onSubmit={registerSubmit}>
+               <input 
+                 type="name" 
+                 required
+                 placeholder='Name ' 
+                 name='name'
+                 value={user.name}
+                 onChange={onChangeInput}
+                 />
                  <input 
                  type="email" 
                  placeholder='email' 
                  name='email'
                  value={user.email}
+                 required
                  onChange={onChangeInput}
                  />
                  <input 
-                 type="text" 
-                 autoComplete='on'
+                 type="password" 
                  placeholder='password' 
                  name='password'
                  value={user.password}
+                 required
                  onChange={onChangeInput}
                  />
                  <div className="btn_wrap">
                     <button type='submit'>
-                      Войти
+                      Зарегиться
                     </button>
-                    <Link to='/register'>
-                        Зарегистрироваться
+                    <Link to='/login'>
+                        Войти
                     </Link>
                  </div>
                </form>

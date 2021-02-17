@@ -8,3 +8,33 @@ ul,li{
   flex-wrap: wrap;
   justify-content: space-between;
 }
+.color_white {
+  color:#fff !important;
+}
+.color_white a {
+  color:#fff;
+  text-decoration: none;
+}
+.prod {
+  position: relative;
+}
+.btn_wrap button {
+  margin-right:20px;
+}
+.login_wrap form {
+  display:flex;
+  flex-direction:column;
+}
+
+.login_wrap {
+  width:400px;
+  border:1px solid #ccc;
+  margin: 0 auto;
+  padding:20px;
+  margin-top:30px;
+}
+.card input{
+position: absolute;
+width: 25px;
+height: 25px;
+}

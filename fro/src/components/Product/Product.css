@@ -6,3 +6,13 @@
 .card_foto img {
   width: 100%;
 }
+.card {
+  position: relative;
+}
+.card_categ {
+  position: absolute;
+  top: 0px;
+  left: 28px;
+  background:#000;
+  color:#fff;
+}

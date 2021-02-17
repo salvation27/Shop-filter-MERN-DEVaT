@@ -5,9 +5,7 @@ import Header from './components/Header/Header'
 import MainPage from './components/MainPage/Pages'
 
 function App(props) {
-  // console.log(props.value)
   return (
-    
     <DataProvider>
       <BrowserRouter>
         <Header />
